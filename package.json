@@ -1,0 +1,11 @@
+{
+  "name": "smartcity-event-carpool",
+  "version": "1.0.0",
+  "description": "smartcity hackathon 2016",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
