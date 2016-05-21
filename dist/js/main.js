@@ -5,4 +5,5 @@ horizon.onReady(function() {
 })
 horizon.connect()
 
-var events = horizon('events')
+const events = horizon('events')
+const users = horizon('users')
