@@ -1,5 +1,5 @@
 
-var horizon = Horizon()
+var horizon = Horizon({authType: 'anonymous'})
 horizon.onReady(function() {
   console.log('db connected. ready to go.')
 })
