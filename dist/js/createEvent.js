@@ -17,7 +17,7 @@ var markup = `
 	</form>
 `
 
-document.getElementById('create_event_view').innerHTML = markup
+document.getElementById('create_event').innerHTML = markup
 
 document.getElementById('create_event_btn').onclick = function(){
 	console.log('creating event...')
