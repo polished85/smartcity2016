@@ -6,7 +6,7 @@ horizon.onReady(function() {
 	      // Each result from the chat collection
 	      //  will pass through this function
 	      console.log(event)
-				var list = document.getElementById('my_events_list')
+				var list = document.getElementById('my_events')
 	      var el = document.createElement('li')
 	      el.textContent = event.author
 	      el.className = 'list-group-item'
