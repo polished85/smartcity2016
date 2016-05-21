@@ -2,7 +2,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>create event</title>
+    <title>find events</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/styles.css">
     <script src="/horizon/horizon.js"></script>
@@ -10,14 +10,20 @@
   <body>
     <nav id="nav"></nav>
     <div class="container">
-      <h1>Create an Event</h1><hr/>
-      <div id="create_event"></div>
+      <table class="table table-striped">
+        <thead>
+          <th>Event Name</th>
+          <th>Date</th>
+          <th>Time</th>
+        </thead>
+        <tbody id="find_events"></tbody>
+      </table>
     </div>
 
     <script src="/js/jquery-2.2.4.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/main.js"></script>
-    <script src="/js/createEvent.js"></script>
+    <script src="/js/findEvents.js"></script>
     <script src="/js/nav.js"></script>
   </body>
 </html>
