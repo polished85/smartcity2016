@@ -12,7 +12,7 @@ horizon.onReady(function() {
 				var table = document.getElementById('find_events')
 	      var tableRow = document.createElement('tr')
 	      var rowMarkup = `
-	      	<td><a href="event.html#${event.id}">${event.name}</a></td>
+	      	<td><a href="join-event.html#${event.id}">${event.name}</a></td>
 	      	<td>${event.date}</td>
 	      	<td>${event.time}</td>
 				`
@@ -49,7 +49,7 @@ horizon.onReady(function() {
 					filteredItems.forEach((event) => {
 			      var tableRow = document.createElement('tr')
 			      var rowMarkup = `
-			      	<td><a href="event.html#${event.id}">${event.name}</a></td>
+			      	<td><a href="join-event.html#${event.id}">${event.name}</a></td>
 			      	<td>${event.date}</td>
 			      	<td>${event.time}</td>
 						`

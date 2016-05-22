@@ -6730,3 +6730,6 @@ button.close {
   text-align: right;
   display: inline-block;
 }
+#join_event .btn {
+  margin-bottom: 15px;
+}
