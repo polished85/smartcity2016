@@ -22,20 +22,24 @@ events
 		eventEl.appendChild(eventList)
 
 		//get user address
-		var uadd = user.find(localStorage.getItem("userid")).fetch().subscribe({
-			user => return user.data.address,
-			err => console.log(err)
-		})
+		var uadd = user.find(localStorage.getItem("userid")).fetch().subscribe(
+			(user) => {
+				return user.data.address
+			},
+			(err) => {
+				console.log(err)
+			}
+		)
 
 		var driverList = document.getElementById('driver-list')
 		var listContent = '<ul>'
-		event.attendees.forEach(funciton(attendee){
+		event.attendees.forEach(function(attendee){
 			if(attendee.type == "driver"){
 				user.find(attendee.userid).fetch().subscribe(
 					(user)=>{
 						console.log(user)
 						var distance = distance(user.data.address, uadd)
-						listContent += '<li class="list-group-item"> Driver: ' + user.data.name + 'is ' + distance + 'away from you. </li>'
+						listContent += '<li class="list-group-item"> Driver: ' + user.data.name + 'is ' + distance + ' away from you. </li>'
 					},
 					(err) => {
 						console.log(err)

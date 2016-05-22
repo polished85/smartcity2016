@@ -19,8 +19,6 @@ events
 		`
 		eventList.innerHTML = eventMarkup
 		eventEl.appendChild(eventList)
-
-		
 	},
 	(err) => {
 		console.log(err)
