@@ -3,7 +3,9 @@ horizon.onReady(function() {
   $('body > div.top-content > div > div > div:nth-child(2) > div:nth-child(4) > div > button').click(function(event){
     event.preventDefault();
     try{
+      var userid = randtoken.generate(16)
       users.store({
+      "id": userid,
       "email": $('#form-email').val(),
       "data": {
         "name": $('#form-name').val(),
@@ -16,8 +18,11 @@ horizon.onReady(function() {
     }catch(err){
       console.log(err)
     }
-    window.location.pathname = "my-events.html"
+
+    localStorage.setItem('userid', userid)
+
     console.log("signed up")
+    window.location.pathname = "my-events.html"
   })
 })
 

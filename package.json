@@ -9,11 +9,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "gulp"            : "*",
-    "gulp-concat"     : "*",
-    "gulp-less"       : "*",
-    "gulp-clean-css"  : "*",
-    "gulp-rename"     : "*",
-    "gulp-uglify"     : "*"
+    "browserify": "^13.0.1",
+    "gulp": "*",
+    "gulp-clean-css": "*",
+    "gulp-concat": "*",
+    "gulp-less": "*",
+    "gulp-rename": "*",
+    "gulp-uglify": "*",
+    "rand-token": "^0.2.1"
   }
 }

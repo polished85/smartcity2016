@@ -5,9 +5,10 @@ horizon.onReady(function() {
     var password = $('#form-password-login').val()
     try{
       users.find({email: email}).fetch().subscribe(
-          (id) => {
-            if(id.data.password == password){
+          (user) => {
+            if(user.data.password == password){
               console.log("signed in")
+              localStorage.setItem('userid', user.id)
               window.location.pathname = "my-events.html"
             }else{
               alert("wrong password!")
