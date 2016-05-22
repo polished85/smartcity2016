@@ -9,7 +9,7 @@ const events = horizon('events')
 const users = horizon('users')
 
 
-// template mark up
+// template mark up nav bar
 
 var markup = `
 <nav class="navbar navbar-default">
@@ -35,7 +35,7 @@ var markup = `
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="settings.html">Settings</a></li>
+            <li><a href="profile.html">Profile</a></li>
             <li><a href="signup.html">Sign out</a></li>
           </ul>
         </li>
@@ -45,7 +45,13 @@ var markup = `
 </nav>
 `
 var nav = document.createElement('nav')
-nav.innerHTML = markup
+$('body').prepend(nav)
+nav.outerHTML = markup
+
+// add sign out event
+$('#bs-example-navbar-collapse-1 > ul.nav.navbar-nav.navbar-right > li.dropdown > ul > li:nth-child(2) > a').click(function(e){
+  localStorage.clear()
+})
 
 // check user authentication
 if(localStorage.getItem('userid') === null){

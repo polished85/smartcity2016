@@ -2,8 +2,9 @@
 horizon.onReady(function() {
   $('body > div.top-content > div > div > div:nth-child(2) > div:nth-child(4) > div > button').click(function(event){
     event.preventDefault();
+    var userid
     try{
-      var userid = randtoken.generate(16)
+      userid = randtoken.generate(16)
       users.store({
       "id": userid,
       "email": $('#form-email').val(),
@@ -11,6 +12,7 @@ horizon.onReady(function() {
         "name": $('#form-name').val(),
         "phone": $('#form-phone').val(),
         "password": $('#form-password').val(),
+        "address": $('#form-address').val(),
         "about": $('#form-about-yourself').val()
         }
       })
