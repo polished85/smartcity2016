@@ -3,6 +3,6 @@ function distance(p1, p2){
   p2 + '&key=AIzaSyDFZXz0ayeYU87ryhOmfHAd6oonUKcpV_U'}, success: funciton(res){
     var data = JSON.parse(res)
     console.log(data)
-    return data.rows[0].elements[0].distance.value
+    return data.rows[0].elements[0].distance.text
   })
 }

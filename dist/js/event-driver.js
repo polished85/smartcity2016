@@ -1,4 +1,3 @@
-
 var eventId = window.location.hash.substring(1)
 console.log('eventId: ', eventId)
 
@@ -20,8 +19,9 @@ events
 		`
 		eventList.innerHTML = eventMarkup
 		eventEl.appendChild(eventList)
+
+		
 	},
 	(err) => {
 		console.log(err)
-	}
-)
+	})
