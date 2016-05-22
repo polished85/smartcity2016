@@ -16,6 +16,7 @@ horizon.onReady(function() {
     }catch(err){
       console.log(err)
     }
+    window.location.pathname = "my-events.html"
     console.log("signed up")
   })
 })
