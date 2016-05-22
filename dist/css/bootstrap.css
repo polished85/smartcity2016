@@ -6513,7 +6513,7 @@ button.close {
 .modal-header:after,
 .modal-footer:after {
   clear: both;
-  content: 'test';
+  /* content: 'test'; */
 }
 .center-block {
   display: block;

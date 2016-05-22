@@ -52,4 +52,8 @@ if(localStorage.getItem('userid') === null){
   if(window.location.pathname != "/signup.html"){
     window.location.pathname = "signup.html"
   }
+}else{
+  if(window.location.pathname == "/signup.html"){
+      window.location.pathname = "my-events.html"
+  }
 }
