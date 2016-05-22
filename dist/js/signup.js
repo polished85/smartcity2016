@@ -4,7 +4,7 @@ horizon.onReady(function() {
     event.preventDefault();
     var userid
     try{
-      userid = randtoken.generate(16)
+      userid = chance.guid(16)
       users.store({
       "id": userid,
       "email": $('#form-email').val(),
@@ -15,7 +15,10 @@ horizon.onReady(function() {
         "address": $('#form-address').val(),
         "about": $('#form-about-yourself').val()
         }
-      })
+      }).subscribe(
+        (id) => console.log(id),
+        (err) => console.log(err)
+      )
       $('body > div.top-content > div > div > div:nth-child(2) > div:nth-child(4) > div > div.form-bottom > form')[0].reset()
     }catch(err){
       console.log(err)
