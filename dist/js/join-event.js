@@ -59,6 +59,37 @@ events
 			)
 		}
 
+		document.getElementById('join_as_passenger').onclick = function(e){
+			console.log('joining as passenger&hellip;')
+			var userId = localStorage.getItem('userid')
+			var attendee = {
+				user: userId,
+				type: 'passenger',
+				users: []
+			}
+			attendees.push(attendee)
+			events
+			.replace({
+				id: event.id,
+				name: event.name,
+				location: event.location,
+				date: event.date,
+				time: event.time,
+				private: event.private,
+				attendees: attendees
+			})
+			.subscribe(
+				(event) => {
+					console.log(event)
+					window.location.pathname = 'event-passenger.html'
+					window.location.hash = event.id
+				},
+				(err) => {
+					console.log(err)
+				}
+			)
+		}
+
 
 
 
